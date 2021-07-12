@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>size units</title>
+    <style>
+      html {
+        font-size: 16 px;
+      }
+      .container {
+        font-size: 10px; /*{by default 2em = 32px , 1em =16px}*/
+        border: 2px solid red;
+        /******vh vw******/
+        height: 100vh;
+        width: 100vw;
+      }
+      h1 {
+        text-align: center;
+      }
+      #first {
+        font-size: 3em;
+        /***************em is relative to the font-size of its direct or nearest parent so there  parent is container so 3*10 = 30px
+          ********************/
+        padding: 3em;
+        /**************There is problem padding is  90
+        because this work for last value 30*3 =90*****************/
+      }
+      #secound {
+        font-size: 3rem;
+        /*******************rem is only relative to the html (root) font-size.
+        so 3*16 =48px ***************************/
+        padding: 3rem;
+        /*******************There is work fine same 16 as root size so 16 * 3= 48px so
+        use em for most margins, and sometimes for padding too.**********/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="first">This is first heading</h1>
+      <h1 id="secound">This is secound heading</h1>
+      <h1 id="third">This is third heading</h1>
+      <h1 id="forth">This is forth heading</h1>
+    </div>
+  </body>
+</html>
+<!--******************* vw VS % ***************** -->
+<!-- 
+? Viewport Width (vw) – A percentage of the full viewport width. 
+
+    ! % length is relative to local context        (containing   element) width, while a vw length is relative to the full width of the browser window.
+ 
+? Viewport Height (vh) – A percentage of the full viewport height. 10vh will resolve to 10% of the current viewport heig
+-->
+<!--******************* vw VS % ***************** -->

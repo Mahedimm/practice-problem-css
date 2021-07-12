@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- This is the standard viewport meta 
+    viewport is area of browser
+    devies-width means width of device
+    width means width of viewpors it's changable not same as devies-width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      body {
+        background-color: aqua;
+      }
+      .box {
+        text-align: center;
+        background-color: rosybrown;
+        color: black;
+        font-size: 5em;
+        border: 2px solid blueviolet;
+        padding: 2rem;
+        display: none;
+      }
+      @media only screen and (max-width: 480px) {
+        #box-1 {
+          display: block;
+          background-color: chartreuse;
+        }
+      }
+
+      @media only screen and (min-width: 481px) and (max-width: 765px) {
+        #box-2 {
+          display: block;
+          background-color: chocolate;
+        }
+      }
+      @media only screen and (min-width: 749px) and (max-width: 1024px) {
+        #box-3 {
+          display: block;
+          background-color: yellowgreen;
+        }
+      }
+      @media only screen and (min-width: 1025px) {
+        #box-4 {
+          display: block;
+          background-color: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box-1">i am a phone</div>
+    <div class="box" id="box-2">i am a tab</div>
+    <div class="box" id="box-3">i am a laptop or small screen</div>
+    <div class="box" id="box-4">i am a widescreen computer</div>
+  </body>
+</html>
+
+<!-- 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV -->
+
+<!--*******************Various way*******************-->
+<!-- 
+  !1. Setting up the viewport
+  ! 2. Ise max-width/max-height
+ !  3.using CSS Media Queries 
+  ! 4. Using rem/vh/vw unit over pixel -->
+<!--*******************Various way*******************-->
